@@ -1,0 +1,63 @@
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 426px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+
+  .hero-tittle {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--primary-white-color);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 496px;
+    padding-bottom: 36px;
+  }
+
+  .list-advantage {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .hero-tittle {
+    padding-bottom: 48px;
+  }
+
+  .section-advantage {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .list-advantage .title-item {
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-bottom: 8px;
+    display: flex;
+  }
+
+  .title-text {
+    width: 264px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    display: flex;
+  }
+}
