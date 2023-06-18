@@ -207,6 +207,16 @@
     display: flex;
     gap: 24px;
   }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: 408px;
+    padding: 72px 24px 24px;
+  }
 }
 /* Desktop 767-1158 */
 
