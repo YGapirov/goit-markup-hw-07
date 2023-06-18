@@ -35,7 +35,7 @@
             <li class="site-item"><a href="" class="site-link link">Contacts</a></li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu-open">
+        <button type="button" class="mobile-menu-open" data-menu-open>
           <svg class="mobile-menu-open_icon" width="32" height="32" stroke="black">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -45,24 +45,26 @@
 
         <address class="adress">
           <ul class="adress-contacts list">
-            <li>
+            <li class="adress-item">
               <a href="mailto:info@devstudio.com" class="adress-link link">info@devstudio.com</a>
             </li>
-            <li><a href="tel:+110001111111" class="adress-link link">+11 (000) 111-11-11</a></li>
+            <li class="adress-item">
+              <a href="tel:+110001111111" class="adress-link link">+11 (000) 111-11-11</a>
+            </li>
           </ul>
         </address>
       </div>
 
       <!-- mob menu -->
 
-      <div class="mobile-menu">
-        <div class="container mobile-menu_container">
-          <button class="mobile-menu_close-btn">
+      <div class="mobile-menu is-hidden" data-menu>
+        <div>
+          <button type="button" class="mobile-menu_close-btn" data-menu-close>
             <svg class="mobile-menu_close-icon" width="8" height="8">
               <use a href="./images/icons.svg#icon-close-black"></use>
             </svg>
           </button>
-          <ul class="mobile-modal-nav list">
+          <ul class="mobile-modal-list list">
             <li class="mob-menu-item">
               <a href="./index.html" class="mobile-menu-link current link">Studio</a>
             </li>
@@ -71,69 +73,51 @@
             </li>
             <li class="mob-menu-item"><a href="#" class="mobile-menu-link link">Contacts</a></li>
           </ul>
-          <div class="mobile-menu-contacts">
-            <address class="mob-menu-address">
-              <ul class="mob-menu-list list">
-                <li class="menu-cont-item">
-                  <a href="tel:+110001111111" class="menu-tel-link link">+11 (000) 111-11-11</a>
-                </li>
-                <li class="menu-cont-item">
-                  <a href="mailto:info@devstudio.com" class="menu-contact-link link"
-                    >info@devstudio.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <!-- mobile social link -->
-            <ul class="mob-soc-list list">
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="nooper noreferrer nofollow"
-                  ><svg class="mob-soc-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
+        </div>
+        <div class="mobile-menu-contacts">
+          <address class="mob-menu-address">
+            <ul class="mob-menu-list list">
+              <li class="menu-cont-item">
+                <a href="tel:+110001111111" class="menu-tel-link link">+11 (000) 111-11-11</a>
               </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="nooper noreferrer nofollow"
+              <li class="menu-cont-item">
+                <a href="mailto:info@devstudio.com" class="menu-contact-link link"
+                  >info@devstudio.com</a
                 >
-                  <svg class="mob-soc-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="nooper noreferrer nofollow"
-                  ><svg class="mob-soc-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="nooper noreferrer nofollow"
-                >
-                  <svg class="mob-soc-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
               </li>
             </ul>
-          </div>
+          </address>
+          <!-- mobile social link -->
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow"
+                ><svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow">
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow"
+                ><svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow">
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -212,13 +196,31 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="section-img-list list">
             <li class="img-list-work">
-              <img src="./images/img1.jpg" alt="screenpc" width="360" height="300" />
+              <img
+                srcset="./images/desktop2x.jpg 2x"
+                src="./images/img1.jpg"
+                alt="screenpc"
+                width="360"
+                height="300"
+              />
             </li>
             <li class="img-list-work">
-              <img src="./images/img2.jpg" alt="screenphone" width="360" height="300" />
+              <img
+                srcset="./images/phone2x.jpg 2x"
+                src="./images/img2.jpg"
+                alt="screenphone"
+                width="360"
+                height="300"
+              />
             </li>
             <li class="img-list-work">
-              <img src="./images/img3.jpg" alt="notebook with phone" width="360" height="300" />
+              <img
+                srcset="./images/phoneapp2x.jpg 2x"
+                src="./images/img3.jpg"
+                alt="notebook with phone"
+                width="360"
+                height="300"
+              />
             </li>
           </ul>
         </div>
@@ -231,7 +233,13 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="title-team list">
             <li class="team-list">
-              <img src="./images/staff1.jpg" alt="avatar Mark Guerrero" width="264" height="260" />
+              <img
+                srcset="./images/mark2x.jpg 2x"
+                src="./images/staff1.jpg"
+                alt="avatar Mark Guerrero"
+                width="264"
+                height="260"
+              />
               <div class="soc-team-title">
                 <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-text">Product Designer</p>
@@ -285,7 +293,13 @@
               </div>
             </li>
             <li class="team-list">
-              <img src="./images/staff2.jpg" alt="avatar Tom Ford" width="264" height="260" />
+              <img
+                srcset="./images/Tom2x.jpg 2x"
+                src="./images/staff2.jpg"
+                alt="avatar Tom Ford"
+                width="264"
+                height="260"
+              />
               <div class="soc-team-title">
                 <h3 class="team-name">Tom Ford</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -340,7 +354,13 @@
               </div>
             </li>
             <li class="team-list">
-              <img src="./images/staff3.jpg" alt="avatar Camila Garcia" width="264" height="260" />
+              <img
+                srcset="./images/Camila2x.jpg 2x"
+                src="./images/staff3.jpg"
+                alt="avatar Camila Garcia"
+                width="264"
+                height="260"
+              />
               <div class="soc-team-title">
                 <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-text">Marketing</p>
@@ -395,7 +415,13 @@
               </div>
             </li>
             <li class="team-list">
-              <img src="./images/staff4.jpg" alt="avatar Daniel Wilson" width="264" height="260" />
+              <img
+                srcset="./images/Daniel2x.jpg 2x"
+                src="./images/staff4.jpg"
+                alt="avatar Daniel Wilson"
+                width="264"
+                height="260"
+              />
               <div class="soc-team-title">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-text">UI Designer</p>
@@ -600,7 +626,7 @@
 
     <!-- Модальне вікно -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="close-icon" width="8" height="8">
@@ -644,11 +670,11 @@
               class="modal-comment"
               placeholder="Text input"
             ></textarea>
-          </div> -->
+          </div>
 
-    <!-- modal check -->
+          <!-- modal check -->
 
-    <!-- <div class="modal-checkbox">
+          <div class="modal-checkbox">
             <input
               id="user-privacy"
               type="checkbox"
@@ -666,10 +692,11 @@
               <a href="#" class="check-link">Privacy Policy</a>
             </label>
           </div>
-          <button type="submit" class="modal-btn btn">Send</button> -->
-    <!-- </form> -->
-    <!-- </div> -->
-    <!-- </div> -->
+          <button type="submit" class="modal-btn btn">Send</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
