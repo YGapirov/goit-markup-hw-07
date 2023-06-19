@@ -297,14 +297,6 @@ img {
 }
 
 .container-svg {
-  /* width: 264px;
-  height: 112px;
-  background: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
   display: none;
 }
 
@@ -345,15 +337,6 @@ img {
   margin-bottom: 72px;
 }
 
-/* .section-img-list {
-  display: flex;
-  gap: 24px;
-} */
-
-/* .img-list-work {
-  width: calc((100% - 48px) / 3);
-} */
-
 /* ==== section 4 команда ======*/
 
 .section-team {
@@ -361,10 +344,6 @@ img {
   padding-bottom: 96px;
   background-color: #f4f4fd;
 }
-
-/* .staf-team {
-  padding-top: 32px;
-} */
 
 .team-name {
   font-weight: 500;
@@ -656,9 +635,10 @@ img {
 /* portfolio */
 
 .portfolio-main {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
+
 .nav-buttom {
   min-width: 69px;
   min-height: 48px;
@@ -694,19 +674,18 @@ img {
   margin-right: auto;
   display: flex;
   gap: 24px;
-  justify-content: center;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .portfolio-section-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 48px;
 }
 
 .portfolio-list {
-  width: 360px;
-  width: calc((100% - 48px) / 3);
+  width: 100%;
 }
 
 .portfolio-link {

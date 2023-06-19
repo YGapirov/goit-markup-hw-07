@@ -217,6 +217,26 @@
     max-width: 408px;
     padding: 72px 24px 24px;
   }
+
+  /* =======PORFOLIO====== */
+
+  .portfolio-main {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .button-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+
+  .portfolio-section-list {
+    gap: 72px 24px;
+  }
+
+  .portfolio-list {
+    width: calc((100% - 24px) / 2);
+  }
 }
 /* Desktop 767-1158 */
 
@@ -512,5 +532,27 @@
     color: var(--primary-white-color);
     margin-bottom: 16px;
     display: block;
+  }
+
+  /* =======PORFOLIO====== */
+
+  .portfolio-main {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .button-list {
+    margin-bottom: 72px;
+  }
+
+  .portfolio-section-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+  }
+
+  .portfolio-list {
+    width: 360px;
+    width: calc((100% - 48px) / 3);
   }
 }

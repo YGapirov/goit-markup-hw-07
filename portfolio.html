@@ -16,31 +16,111 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <!-- header -->
+
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="./index.html" class="logo link">Web<span class="logo-color">Studio</span> </a>
           <ul class="site-nav list">
-            <li class="site-list"><a href="./index.html" class="site-link link">Studio</a></li>
-            <li class="site-list current-page">
+            <li class="site-item">
+              <a href="./index.html" class="site-link link">Studio</a>
+            </li>
+            <li class="site-item">
               <a href="./portfolio.html" class="site-link current link">Portfolio</a>
             </li>
-            <li class="site-list"><a href="" class="site-link link">Contacts</a></li>
+            <li class="site-item"><a href="" class="site-link link">Contacts</a></li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open" data-menu-open>
+          <svg class="mobile-menu-open_icon" width="32" height="32" stroke="black">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
 
         <!-- contacts -->
+
         <address class="adress">
           <ul class="adress-contacts list">
-            <li>
+            <li class="adress-item">
               <a href="mailto:info@devstudio.com" class="adress-link link">info@devstudio.com</a>
             </li>
-            <li><a href="tel:+110001111111" class="adress-link link">+11 (000) 111-11-11</a></li>
+            <li class="adress-item">
+              <a href="tel:+110001111111" class="adress-link link">+11 (000) 111-11-11</a>
+            </li>
           </ul>
         </address>
+      </div>
+
+      <!-- mob menu -->
+
+      <div class="mobile-menu is-hidden" data-menu>
+        <div>
+          <button type="button" class="mobile-menu_close-btn" data-menu-close>
+            <svg class="mobile-menu_close-icon" width="8" height="8">
+              <use a href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mobile-modal-list list">
+            <li class="mob-menu-item">
+              <a href="./index.html" class="mobile-menu-link link">Studio</a>
+            </li>
+            <li class="mob-menu-item">
+              <a href="./portfolio.html" class="mobile-menu-link current link">Portfolio</a>
+            </li>
+            <li class="mob-menu-item"><a href="#" class="mobile-menu-link link">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="mobile-menu-contacts">
+          <address class="mob-menu-address">
+            <ul class="mob-menu-list list">
+              <li class="menu-cont-item">
+                <a href="tel:+110001111111" class="menu-tel-link link">+11 (000) 111-11-11</a>
+              </li>
+              <li class="menu-cont-item">
+                <a href="mailto:info@devstudio.com" class="menu-contact-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <!-- mobile social link -->
+
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow"
+                ><svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow">
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow"
+                ><svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link" target="_blank" rel="nooper noreferrer nofollow">
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -61,12 +141,27 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link"
                 ><div class="portfolio-list-wrapper">
-                  <img
-                    src="./images/bankapp.jpg"
-                    alt="BankApp screenshout"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img1-desk-1x.jpg 1x, ./images/img1-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img1-tabl-1x.jpg 1x, ./images/img1-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img1-mob-1x.jpg 1x, ./images/img1-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img1-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -81,8 +176,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/paypass.jpg" alt="Paypass phone" width="360" height="300" />
-
+                  <picture>
+                    <source
+                      srcset="./images/img2-desk-1x.jpg 1x, ./images/img2-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img2-tabl-1x.jpg 1x, ./images/img2-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img2-mob-1x.jpg 1x, ./images/img2-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img2-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -97,12 +210,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img
-                    src="./images/medapp.jpg"
-                    alt="Notebook with phone"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-desk-1x.jpg 1x, ./images/img3-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-tabl-1x.jpg 1x, ./images/img1-tab3-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-mob-1x.jpg 1x, ./images/img3-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img3-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -117,7 +244,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/car.jpg" alt="Car" width="360" height="300" />
+                  <picture>
+                    <source
+                      srcset="./images/img4-desk-1x.jpg 1x, ./images/img4-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img4-tabl-1x.jpg 1x, ./images/img4-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img4-mob-1x.jpg 1x, ./images/img4-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img4-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -132,7 +278,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/phone.jpg" alt="Mobile phone" width="360" height="300" />
+                  <picture>
+                    <source
+                      srcset="./images/img5-desk-1x.jpg 1x, ./images/img5-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img5-tabl-1x.jpg 1x, ./images/img5-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img5-mob-1x.jpg 1x, ./images/img5-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img5-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -147,7 +312,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/orangegirl.jpg" alt="Orange girl" width="360" height="300" />
+                  <picture>
+                    <source
+                      srcset="./images/img6-desk-1x.jpg 1x, ./images/img6-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img6-tabl-1x.jpg 1x, ./images/img6-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img6-mob-1x.jpg 1x, ./images/img6-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img6-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -161,13 +345,26 @@
             </li>
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
-                <div class="portfolio-list-wrapper">
-                  <img
-                    src="./images/insta.jpg"
-                    alt="Instagram screenshout"
-                    width="360"
-                    height="300"
-                  />
+                <picture>
+                    <source
+                      srcset="./images/img7-desk-1x.jpg 1x, ./images/img7-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img7-tabl-1x.jpg 1x, ./images/img7-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img7-mob-1x.jpg 1x, ./images/img7-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img7-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -182,7 +379,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/food.jpg" alt="Food" width="360" height="300" />
+                  <picture>
+                    <source
+                      srcset="./images/img8-desk-1x.jpg 1x, ./images/img8-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img8-tabl-1x.jpg 1x, ./images/img8-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img8-mob-1x.jpg 1x, ./images/img8-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img8-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -197,7 +413,26 @@
             <li class="portfolio-list">
               <a href="" class="link portfolio-link">
                 <div class="portfolio-list-wrapper">
-                  <img src="./images/coffe.jpg" alt="Cup of coffee" width="360" height="300" />
+                  <picture>
+                    <source
+                      srcset="./images/img9-desk-1x.jpg 1x, ./images/img9-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img9-tabl-1x.jpg 1x, ./images/img9-tabl-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img9-mob-1x.jpg 1x, ./images/img9-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/img9-mob-1x.jpg"
+                      alt="BankApp screenshout"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -306,5 +541,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
