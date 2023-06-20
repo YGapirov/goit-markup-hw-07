@@ -129,8 +129,8 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
-  background-color: #e7e9fc;
-  border: 1px solid #2e2f42;
+  background-color: rgba(231, 233, 252, 0.1);
+  border: 1px solid rgba(46, 47, 66, 0.1);
   border-radius: 50%;
   padding: 0;
   width: 24px;
@@ -193,8 +193,9 @@ img {
 }
 
 .mob-soc-list {
+  max-width: 328px;
   display: flex;
-  gap: 56px;
+  justify-content: space-between;
 }
 
 .mob-soc-item {
@@ -218,13 +219,13 @@ img {
 
 .hero {
   max-width: 1440px;
-  height: 600px;
+
   left: 0px;
   top: 72px;
   background-color: var(--primary-text-color);
   margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/Dark-bg-mob.jpg);
   background-repeat: no-repeat;
