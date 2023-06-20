@@ -219,9 +219,6 @@ img {
 
 .hero {
   max-width: 1440px;
-
-  left: 0px;
-  top: 72px;
   background-color: var(--primary-text-color);
   margin: 0 auto;
   padding-top: 112px;
